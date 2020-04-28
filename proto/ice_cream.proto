@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+service IceCream {
+  rpc OrderIceCream(IceCreamRequest) returns (IceCreamResponse);
+}
+
+message IceCreamRequest {
+  int32 scoops = 1;
+  string flavor = 2;
+}
+
+message IceCreamResponse {
+  string message = 1;
+}
